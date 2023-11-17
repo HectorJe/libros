@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo1.css">
+    <script src="app.js" async></script>
+    <link rel="manifest" href="./manifest.json">
+    <script>
+        if ("serviceWorker" in navigator){
+            navigator.serviceWorker.register("sw.js");
+        }
+    </script>
+    <script>
+        function Conexion(){
+        if (navigator.onLine){
+        }else{
+            alert("Se perdio la conexión a internet");
+            window.location.href='sin-conexion.html';
+        }
+        }
+        Conexion();
+        setInterval(Conexion,2000);
+    </script>
+    <title>Tienda Online de Libros</title>
+</head>
+<body><header>
+        <h1>Conoce los libros de Danthe Aligheri</h1>
+        </header>
+    <a href="index.html" class="regreso">Regresar</a>
+    <section class="contenedor">
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Divina Comedia</span>
+                <div class="back">
+                    <div class="descripcion">
+                        <p>La Divina Comedia sigue el camino desde el centro de la Tierra, donde se halla Lucifer, hasta el dominio de Dios. El tema de la obra es el recorrido del poeta a través del más allá. En su obra se encuentra gran capacidad para describir el infierno, los círculos, los sufrimientos y los pecadores.</p>
+                    </div>
+                </div>
+                <img src="img/divina.jpg" alt="" class="img-item">
+                <span class="precio-item">$150</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Infierno</span>
+                <div class="back">
+                    <div class="descripcion">
+                        <p>El Infierno es la primera de las tres cánticas de la Divina comedia del poeta florentino Dante Alighieri. Las siguientes cánticas son el Purgatorio y el Paraíso. Está formada por 33 cantos, más uno de introducción; cada canto está subdividido en tercetos cuya rima es encadenada.</p>
+                    </div>
+                </div>
+                <img src="img/infierno.jpg" alt="" class="img-item">
+                <span class="precio-item">$250</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">La vida nueva</span>
+                <div class="back">
+                    <div class="descripcion">
+                        <p>La Vita nuova es la primera obra conocida de Dante Alighieri, escrita entre 1292 y 1293, poco después de la muerte de su amada Beatriz. Consta de 42 capítulos en los que se alterna poesía y prosa. El sentido del título viene dado por la renovación vital que experimenta el poeta al enamorarse de su amada. </p>
+                    </div>
+                </div>
+                <img src="img/la vida.jpg" alt="" class="img-item">
+                <span class="precio-item">$100</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">El convivio</span>
+                <div class="back">
+                    <div class="descripcion">
+                        <p>El Convivio es una obra de Dante durante el exilio, entre 1304 y 1307. El término "convivio" viene latín convivium y significa "banquete".</p>
+                    </div>
+                </div>
+                <img src="img/convivio.jpg" alt="" class="img-item">
+                <span class="precio-item">$180</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            
+        </div>
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

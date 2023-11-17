@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo1.css">
+    <script src="app.js" async></script>
+    <link rel="manifest" href="./manifest.json">
+    <script>
+        if ("serviceWorker" in navigator){
+            navigator.serviceWorker.register("sw.js");
+        }
+    </script>
+    <script>
+        function Conexion(){
+        if (navigator.onLine){
+        }else{
+            alert("Se perdio la conexión a internet");
+            window.location.href='sin-conexion.html';
+        }
+        }
+        Conexion();
+        setInterval(Conexion,2000);
+    </script>
+    <title>Tienda Online de Libros</title>
+</head>
+<body>
+    <header>
+        <h1>Conoce los libros de Agatha Christie</h1>
+    </header>
+    <a href="index.html" class="regreso">Regresar</a>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">La venganza de nofret</span>
+                <div class="back">
+                    <div class="descripcion">
+                        <p>La venganza de Nofret es un libro de la escritora británica Agatha Christie, publicado en 1944, una de las pocas historias de la autora que no ocurre en el siglo xx. La trama tiene lugar en el Antiguo Egipto, con una explicación del contexto cultural de dicha civilización.</p>
+                    </div>
+                </div>
+                <img src="img/venganza.jpg" alt="" class="img-item">
+                <span class="precio-item">$150</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Los cuadernos Secretos</span>
+                <div class="back">
+                    <div class="descripcion">
+                        <p>Una fascinante exploración del contenido de los 73 cuadernos de notas de Agatha Christie recientemente descubiertos, que incluyen ilustraciones, extractos eliminados y dos novelas inéditas de Poirot.</p>
+                    </div>
+                </div>
+                <img src="img/cuadernos.jpg" alt="" class="img-item">
+                <span class="precio-item">$250</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Peligro Inminente</span>
+                <div class="back">
+                    <div class="descripcion">
+                        <p>Peligro inminente, ​ cuyo título original en inglés es Peril at End House, es un libro de la escritora británica Agatha Christie publicado en 1932.</p>
+                    </div>
+                </div>
+                <img src="img/peligro.webp" alt="" class="img-item">
+                <span class="precio-item">$100</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">El misterioso Señor Brown</span>
+                <div class="back">
+                    <div class="descripcion">
+                        <p>El misterioso señor Brown es una novela de ficción detectivesca de la escritora británica Agatha Christie publicada originalmente en el Reino Unido en 1922 por la editorial The Bodley Head, ​ y en la que aparecen por vez primera los personajes de Tommy y Tuppence Beresford.​</p>
+                    </div>
+                </div>
+                <img src="img/el misterioso.webp" alt="" class="img-item">
+                <span class="precio-item">$180</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            
+        </div>
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

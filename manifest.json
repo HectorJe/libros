@@ -1,0 +1,16 @@
+{
+    "name": "Tienda Online de Libros",
+    "short_name": "Tienda Libros",
+    "theme_color": "#8F0900",
+    "display": "standalone",
+    "orientation":"portrait",
+    "start_url":"/index.html",
+    "icons": [
+      {
+        "src": "img/icono.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
